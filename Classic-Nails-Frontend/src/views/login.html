@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Classic Nails">
+    <meta name="author" content="Chudi Duru">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Classic Nails</title>
+</head>
+<body onload="SwitchScreen()">
+<div id="app">
+    <Header />
+    <LoginForm />
+    <Footer />
+</div>
+
+<!-- Vue.js template for Header -->
+<template id="header-template">
+    <header>
+        <div class="logo">
+            <img src="img/Logo.png" alt="Page Logo">
+        </div>
+    </header>
+</template>
+
+<!-- Vue.js template for Login Form -->
+<template id="login-form-template">
+    <section class="container">
+        <article class="form-area">
+            <form>
+                <input type="email" name="username" id="username" placeholder="Phone number, username, or email">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="submit" name="submit" value="Log In">
+                <div class="other-option">
+                    <div></div> <p>OR</p> <div></div>
+                </div>
+                <div class="options">
+                    <a href="#" class="social"> <span><i class="fab fa-facebook-square"></i></span> Log in with Google </a>
+                    <div class="forget"> <a href="#">Forgot password?</a> </div>
+                </div>
+            </form>
+            <div class="noaccount">
+                <a href="#">Don't have an account? <span>Sign up</span></a>
+            </div>
+            <div class="apps">
+                <!-- Apps content goes here -->
+            </div>
+        </article>
+    </section>
+</template>
+
+<!-- Vue.js template for Footer -->
+<template id="footer-template">
+    <footer>
+        <div class="footer-content">
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Jobs</a>
+            <a href="#">Help</a>
+            <a href="#">API</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Locations</a>
+            <a href="#">Non-User Uploads</a>
+        </div>
+        <div>
+            <a href="#">Nails</a>
+            <a href="#">Spa</a>
+            <a href="#">Massages</a>
+            <a href="#">Facials</a>
+            <a href="#">Body Treatments</a>
+        </div>
+        <div class="copyright">
+            <select aria-label="Change display language">
+                <option value="en">English</option>
+                <!-- Other language options can be added here -->
+            </select>
+            <span>&copy; 2024 Classic Nails from Google</span>
+        </div>
+    </footer>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+    Vue.component('Header', {
+        template: '#header-template'
+    });
+
+    Vue.component('LoginForm', {
+        template: '#login-form-template'
+    });
+
+    Vue.component('Footer', {
+        template: '#footer-template'
+    });
+
+    new Vue({
+        el: '#app'
+    });
+</script>
+</body>
+</html>
